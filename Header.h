@@ -6,28 +6,28 @@
 
 using namespace std;
 
-class Bag {
+class Bug {
 public:
 	string description;
 	int severity;
 	float deadline;
 	string status;
-	string assegnee;
+	string assignee;
 
-	Bag* next = NULL;
-	Bag* previous = NULL;
-	Bag(string, int, float, string, string);
+	Bug* next = NULL;
+	Bug* previous = NULL;
+	Bug(string, int, float, string, string);
 
 	void showSomething() const;
-	Bag(Bag& B);
+	Bug(Bug& B);
 };
 
 class BackLog {
 public:
-	~BackLog();
-	Bag* begin = NULL;
-	Bag* end = NULL;
-	void insert(Bag* give1);
+	  ~BackLog();
+	Bug* begin = NULL;
+	Bug* end = NULL;
+	void insert(Bug* give1);
 	void show();
 	void showByStatus();
 	void shortBySeverity();
